@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_baseline_music_note_24"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <TextView
+            android:id="@+id/currentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="00:00"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="240dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:id="@+id/allTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/waveformSeekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/btnBackThree"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="5dp"
+            android:src="@drawable/ic_baseline_keyboard_double_arrow_left_24" />
+
+        <ImageView
+            android:id="@+id/btnBackTwo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="5dp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <ImageView
+            android:id="@+id/btnPlay"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="5dp"
+            android:src="@drawable/ic_baseline_play_circle_outline_24" />
+
+        <ImageView
+            android:id="@+id/btnForwardTwo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="5dp"
+            android:src="@drawable/ic_baseline_arrow_forward_24" />
+
+        <ImageView
+            android:id="@+id/btnForwardThree"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="5dp"
+            android:src="@drawable/ic_baseline_keyboard_double_arrow_right_24" />
+
+
+    </LinearLayout>
+
+    <com.masoudss.lib.WaveformSeekBar
+        android:id="@+id/waveformSeekBar"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:marker_color="@color/purple_500"
+        app:marker_text_color="@color/teal_700"
+        app:marker_text_size="12dp"
+        app:marker_width="1dp"
+        app:wave_background_color="@color/blue"
+        app:wave_corner_radius="1dp"
+        app:wave_gap="2dp"
+        app:wave_gravity="center"
+        app:wave_max_progress="100"
+        app:wave_min_height="5dp"
+        app:wave_padding_Bottom="2dp"
+        app:wave_padding_left="2dp"
+        app:wave_padding_right="2dp"
+        app:wave_padding_top="2dp"
+        app:wave_progress="33"
+        app:wave_progress_color="@color/black"
+        app:wave_visible_progress="50"
+        app:wave_width="3dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
